@@ -1,0 +1,134 @@
+.assignment-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.assignment-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(10px);
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.2) 0%, rgba(83, 91, 242, 0.15) 100%);
+  border-color: rgba(100, 108, 255, 0.4);
+  box-shadow: 0 4px 12px rgba(100, 108, 255, 0.3);
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, #646cff 0%, #535bf2 100%);
+  border-color: #646cff;
+  color: white;
+  box-shadow: 0 4px 16px rgba(100, 108, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.button-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.nav-button.active .button-number {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.button-title {
+  font-weight: 600;
+}
+
+@media (prefers-color-scheme: light) {
+  .assignment-nav {
+    background: linear-gradient(135deg, rgba(245, 247, 250, 0.95) 0%, rgba(232, 236, 241, 0.95) 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-button {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .nav-button:hover {
+    background: linear-gradient(135deg, rgba(100, 108, 255, 0.1) 0%, rgba(83, 91, 242, 0.08) 100%);
+    border-color: rgba(100, 108, 255, 0.3);
+  }
+
+  .button-number {
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 0 1rem;
+  }
+
+  .nav-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .assignment-buttons {
+    gap: 0.5rem;
+  }
+
+  .nav-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .button-number {
+    width: 20px;
+    height: 20px;
+    font-size: 0.75rem;
+  }
+}

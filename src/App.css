@@ -5,6 +5,11 @@
   padding: 0;
 }
 
+.assignment-content {
+  width: 100%;
+  min-height: calc(100vh - 120px);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

@@ -1,7 +1,7 @@
-import './ProductList.css'
+import './css/ProductList.css'
 import ProductCard from './ProductCard'
 
-const ProductList = ({ products = [] }) => {
+const ProductListComponent = ({ products = [] }) => {
     return (
         <div className="product-list-container">
             <h1 className="product-list-title">Our Products</h1>
@@ -14,4 +14,4 @@ const ProductList = ({ products = [] }) => {
     )
 }
 
-export default ProductList
+export default ProductListComponent
